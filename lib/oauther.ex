@@ -139,8 +139,8 @@ defmodule OAuther do
   end
 
   defp nonce() do
-    :crypto.strong_rand_bytes(24)
-    |> Base.encode64
+    :crypto.strong_rand_bytes(16)
+    |> Base.encode16
   end
 
   defp timestamp() do
